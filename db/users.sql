@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2021 at 03:04 AM
+-- Generation Time: Dec 14, 2021 at 03:21 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `as`
+-- Database: `login-signup-php`
 --
 
 -- --------------------------------------------------------
@@ -31,19 +31,15 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
-  `email` varchar(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `number` int(100) NOT NULL,
-  `country` varchar(100) NOT NULL,
-  `address` varchar(100) NOT NULL
+  `username` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `password`, `created_at`, `email`, `name`, `number`, `country`, `address`) VALUES
-(15, '$2y$10$mVwlfXU7.1JqY9rFeVKUyuljk2eP/72/yyOXbsy4hBjJdGlIrCZky', '2021-12-05 10:56:11', 'bizdamn@gmail.com', 'Name', 2147483647, 'India', 'n@gmail');
+INSERT INTO `users` (`id`, `password`, `created_at`, `username`) VALUES
+(16, '$2y$10$NwX7QDdjSTJnKEeXTaTIvufSNq.Br2.EUYAt3nAYrF4Fl5ul/L4/6', '2021-12-14 07:50:48', 'apoo');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +59,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
